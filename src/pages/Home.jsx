@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaTelegram, FaRocket } from "react-icons/fa";
 import toast, { Toaster } from 'react-hot-toast';
-import user from "../assets/user.png";
+
 
 export default function Home({ isDark }) {
   const [mounted, setMounted] = useState(false);
@@ -87,7 +87,7 @@ export default function Home({ isDark }) {
         <div className="flex-1 flex justify-center relative mt-12 md:mt-0">
           <div className="relative">
             <div className={`absolute inset-0 rounded-full blur-lg opacity-30 animate-pulse ${isDark ? "bg-primary/40" : "bg-secondary/30"}`}></div>
-            <img src={user} alt="Abror's profile" className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-transparent shadow-2xl" />
+            <img src='/assets/user.png' alt="Abror's profile" className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-transparent shadow-2xl" />
             <div className={`absolute -top-4 -right-4 h-14 w-14 rounded-full flex items-center justify-center animate-bounce ${isDark ? "bg-primary/20 border-primary/30" : "bg-secondary/20 border-secondary/30"}`}>
               <FaRocket className="text-xl text-primary-content" />
             </div>

@@ -1,66 +1,56 @@
-import unvibe from "../assets/unvibe.png";
-import Internship from "../assets/Internship.png";
-import TezBozor from "../assets/TezBozor.png";
-import Portfolio from "../assets/Portfolio.png";
-import soft from "../assets/soft.png";
-import jsbasic from "../assets/Jsbasic.png";
-import jsintermediate from "../assets/jsintermediate.png";
-import node from "../assets/node.png";
-
 export default function Projects() {
   const projects = [
     {
       name: "TezBozor E-commerce",
       desc: "Node.js API + React frontend bilan yaratilgan onlayn do‘kon",
       link: "",
-      img: TezBozor,
+      img: "/assets/TezBozor.png",
     },
     {
       name: "Unvibe",
       desc: "Back-end + Front-end admin dashboard + student pages",
       link: "https://newuu.uz/",
-      img: unvibe,
+      img: "/assets/Unvibe.png",
     },
     {
       name: "Internship",
       desc: "for MARS internship students",
       link: "https://interns-lovat.vercel.app/",
-      img: Internship,
+      img: "/assets/Internship.png",
     },
     {
       name: "Portfolio Website",
       desc: "Shaxsiy portfoliom",
       link: "#",
-      img: Portfolio,
+      img: "/assets/Portfolio.png",
     },
   ];
 
   const certificates = [
     {
-      img: soft,
+      img: "/assets/soft.png",
       name: "HackerRank",
       desc: "Front-end Software engineer certificate",
       link: "https://www.hackerrank.com/certificates/iframe/d22259420867",
     },
     {
-      img: jsbasic,
+      img: "/assets/Jsbasic.png",
       name: "HackerRank",
       desc: "Front-end Javascript basics certificate",
       link: "https://www.hackerrank.com/certificates/iframe/63d5ca9cc5b9",
     },
-      {
-      img: jsintermediate,
+    {
+      img: "/assets/Jsintermediate.png",
       name: "HackerRank",
       desc: "Front-end Javascript intermediate certificate",
       link: "https://www.hackerrank.com/certificates/iframe/2e85bb751599",
     },
-      {
-      img: node,
+    {
+      img: "/assets/Node.png",
       name: "HackerRank",
       desc: "Backend node.js",
       link: "https://www.hackerrank.com/certificates/iframe/2e85bb751599",
     },
-   
   ];
 
   return (
@@ -109,4 +99,3 @@ export default function Projects() {
     </div>
   );
 }
-  

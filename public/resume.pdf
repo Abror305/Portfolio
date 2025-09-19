@@ -1,8 +1,0 @@
-const handleDownload = () => {
-  const link = document.createElement("a");
-  link.href = "/resume.pdf"; // public papkadagi fayl
-  link.download = "Abror_Resume.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
