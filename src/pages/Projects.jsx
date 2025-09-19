@@ -64,7 +64,7 @@ export default function Projects({ isDark }) {
           {projects.map((project, i) => (
             <div
               key={i}
-              className={`rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-xl ${
+              className={`flex flex-col rounded-xl shadow-lg overflow-hidden transition hover:-translate-y-1 hover:shadow-xl ${
                 isDark ? "bg-base-100" : "bg-base-200"
               }`}
             >
@@ -73,7 +73,7 @@ export default function Projects({ isDark }) {
                 alt={project.name}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4 flex flex-col justify-between h-40">
+              <div className="flex flex-col justify-between flex-1 p-4">
                 <div>
                   <h3 className="text-xl font-semibold">{project.name}</h3>
                   <p className="text-sm opacity-80">{project.desc}</p>
@@ -82,7 +82,7 @@ export default function Projects({ isDark }) {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-2 text-primary hover:underline"
+                  className="mt-4 inline-flex items-center gap-2 text-primary hover:underline"
                 >
                   View <FaExternalLinkAlt size={14} />
                 </a>
@@ -99,7 +99,7 @@ export default function Projects({ isDark }) {
           {certificates.map((cert, i) => (
             <div
               key={i}
-              className={`rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-xl ${
+              className={`flex flex-col rounded-xl shadow-lg overflow-hidden transition hover:-translate-y-1 hover:shadow-xl ${
                 isDark ? "bg-base-100" : "bg-base-200"
               }`}
             >
@@ -108,7 +108,7 @@ export default function Projects({ isDark }) {
                 alt={cert.name}
                 className="w-full h-48 object-contain bg-white"
               />
-              <div className="p-4 flex flex-col justify-between h-40">
+              <div className="flex flex-col justify-between flex-1 p-4">
                 <div>
                   <h3 className="text-xl font-semibold">{cert.name}</h3>
                   <p className="text-sm opacity-80">{cert.desc}</p>
@@ -117,7 +117,7 @@ export default function Projects({ isDark }) {
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-2 text-primary hover:underline"
+                  className="mt-4 inline-flex items-center gap-2 text-primary hover:underline"
                 >
                   View <FaExternalLinkAlt size={14} />
                 </a>
