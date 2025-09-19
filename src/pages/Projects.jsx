@@ -5,7 +5,7 @@ export default function Projects({ isDark }) {
     {
       name: "TezBozor E-commerce",
       desc: "Node.js API + React frontend bilan yaratilgan onlayn do‘kon",
-      link: "",
+      link: "https://tezbor.uz/ru",
       img: "/assets/TezBozor.png",
     },
     {
@@ -23,7 +23,7 @@ export default function Projects({ isDark }) {
     {
       name: "Portfolio Website",
       desc: "Shaxsiy portfoliom",
-      link: "#",
+      link: "https://myrezume.onrender.com",
       img: "/assets/Portfolio.png",
     },
   ];
