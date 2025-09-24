@@ -1,7 +1,8 @@
 import { TypeAnimation } from "react-type-animation";
 import { useState, useEffect } from "react";
 import { FaTelegram, FaRocket } from "react-icons/fa";
-import toast, { Toaster } from "react-hot-toast";
+import { Link } from "react-router-dom";
+import Contact from "./Contact";
 
 export default function Home({ isDark }) {
   const [mounted, setMounted] = useState(false);
@@ -21,42 +22,26 @@ export default function Home({ isDark }) {
     document.body.removeChild(link);
   };
 
-  const [canClick, setCanClick] = useState(true);
-  const handleHireMe = () => {
-    if (!canClick) return;
-    toast.success("Thank you! for hire me");
-    setCanClick(false);
-    setTimeout(() => setCanClick(true), 6000);
-  };
-
   return (
     <div
       className={`min-h-screen flex items-center justify-center p-4 md:p-8 transition-colors duration-500 ${
         isDark ? "bg-base-200" : "bg-base-100"
       }`}
     >
-      <Toaster position="top-right" />
-
       <div className="container mx-auto flex flex-col items-center justify-center gap-8 md:gap-12 py-12">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 w-full">
-          
-          {/* Image with rocket - always top on small screens */}
-          <div className="order-1 lg:order-2 flex-1 flex justify-center lg:justify-end relative mb-8 md:mb-0">
+          {/* Image with rocket */}
+          <div className="order-1 lg:order-2 flex-1 flex justify-center lg:justify-end relative mb-8 md:mb-0 lg:pr-8">
             <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-80 lg:h-80">
-              {/* background glow */}
               <div
                 className={`absolute inset-0 rounded-full blur-2xl scale-110 opacity-40 animate-pulse 
                 ${isDark ? "bg-primary/40" : "bg-secondary/40"}`}
               ></div>
-
-              {/* profile image */}
               <img
                 src="/assets/user.png"
                 alt="Abror's profile"
                 className="relative w-full h-full rounded-full object-cover border-4 border-transparent shadow-2xl"
               />
-
-              {/* rocket icon */}
               <div
                 className={`absolute top-0 right-0 translate-x-1/3 -translate-y-1/2
                 h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-full flex items-center justify-center 
@@ -105,12 +90,12 @@ export default function Home({ isDark }) {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button
-                onClick={handleHireMe}
-                className="px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl bg-primary text-primary-content hover:bg-primary-focus"
-              >
-                Hire Me <FaRocket />
-              </button>
+              <Link to="/contact" element={<Contact />}>
+                <button className="px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl bg-primary text-primary-content hover:bg-primary-focus">
+                  Contact Me
+                  <FaRocket />
+                </button>
+              </Link>
 
               <button
                 onClick={handleDownload}
@@ -132,7 +117,6 @@ export default function Home({ isDark }) {
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </div>
