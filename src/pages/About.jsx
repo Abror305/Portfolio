@@ -31,8 +31,9 @@ export default function About() {
           <div className="hero-content text-center max-w-4xl">
             <div>
               <div className="avatar mb-6 mx-auto">
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4 flex items-center justify-center text-5xl md:text-6xl bg-base-300 dark:bg-base-400">
-                  👨‍💻
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4 flex items-center justify-center  md:text-6xl bg-base-300 dark:bg-base-400">
+                  <img src="/assets/im.jpg" alt="profile" />
+
                 </div>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 text-primary dark:text-base-content transition-colors duration-500">
