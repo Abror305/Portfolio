@@ -4,6 +4,7 @@ import { FaTelegram, FaRocket } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
 
+
 export default function Home({ isDark }) {
   const [mounted, setMounted] = useState(false);
 
@@ -105,8 +106,8 @@ export default function Home({ isDark }) {
               ${isDark ? "bg-primary/40" : "bg-secondary/40"}`}
             ></div>
             <img
-              src="/assets/im.jpg"
-              alt="Abror's profile"
+              src={"assets/im.jpg"}
+              alt="Abror's image"
               className="relative w-full h-full rounded-full object-cover border-2 sm:border-4 border-transparent shadow-xl"
             />
             <div
