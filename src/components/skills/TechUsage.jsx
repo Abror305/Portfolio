@@ -9,19 +9,21 @@ export default function TechUsage({ techUsageData, isDark }) {
     <div className="card bg-base-200/80 backdrop-blur-md shadow-2xl">
       <div className="card-body">
         <h2
-          className="card-title text-3xl font-bold mb-6 justify-center"
-          style={{ color: textColor }}
+          className={`card-title text-3xl font-bold mb-6 justify-center ${
+            isDark ? "text-white" : "text-black"
+          }`}
         >
           Tech Focus Areas
         </h2>
-        <div className="h-80">
+
+        <div className="h-72 sm:h-80">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
                 data={techUsageData}
                 cx="50%"
                 cy="50%"
-                outerRadius={100}
+                outerRadius="80%"
                 dataKey="value"
                 label={({ name, percent, x, y }) => (
                   <text
@@ -36,7 +38,10 @@ export default function TechUsage({ techUsageData, isDark }) {
                 )}
               >
                 {techUsageData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={colors[index % colors.length]}
+                  />
                 ))}
               </Pie>
               <Tooltip content={<CustomTooltip isDark={isDark} />} />

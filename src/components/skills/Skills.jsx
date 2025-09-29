@@ -23,10 +23,34 @@ export default function Skills() {
   ];
 
   const projectsData = [
-    { project: "Unvibe", complexity: 85, tech: ["React", "Node.js", "MongoDB"], status: "Live", users: "500+" },
-    { project: "TezBozor", complexity: 90, tech: ["React", "Express", "PostgreSQL"], status: "Development", users: "Coming Soon" },
-    { project: "Portfolio Sites", complexity: 60, tech: ["HTML", "CSS", "JS"], status: "Multiple", users: "Various" },
-    { project: "E-commerce", complexity: 95, tech: ["MERN Stack"], status: "Planning", users: "TBD" },
+    {
+      project: "Unvibe",
+      complexity: 85,
+      tech: ["React", "Node.js", "MongoDB"],
+      status: "Live",
+      users: "500+",
+    },
+    {
+      project: "TezBozor",
+      complexity: 90,
+      tech: ["React", "Express", "PostgreSQL"],
+      status: "Development",
+      users: "Coming Soon",
+    },
+    {
+      project: "Portfolio Sites",
+      complexity: 60,
+      tech: ["HTML", "CSS", "JS"],
+      status: "Multiple",
+      users: "Various",
+    },
+    {
+      project: "E-commerce",
+      complexity: 95,
+      tech: ["MERN Stack"],
+      status: "Planning",
+      users: "TBD",
+    },
   ];
 
   const techUsageData = [
@@ -46,25 +70,39 @@ export default function Skills() {
   ];
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${isDark ? "bg-base-100" : "bg-base-200"}`}>
+    <div
+      className={`min-h-screen transition-colors duration-500 ${
+        isDark ? "bg-base-100" : "bg-base-200"
+      }`}
+    >
       <BackgroundParticles isDark={isDark} />
-      <div className="relative z-10 max-w-7xl mx-auto p-6 space-y-12">
-        <SkillsRadar 
-          skillsData={skillsData} 
-          selectedSkill={selectedSkill} 
-          setSelectedSkill={setSelectedSkill} 
-          isDark={isDark} 
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+        {/* Skills Radar */}
+        <SkillsRadar
+          skillsData={skillsData}
+          selectedSkill={selectedSkill}
+          setSelectedSkill={setSelectedSkill}
+          isDark={isDark}
         />
-        <ProjectsPortfolio 
-          projectsData={projectsData} 
-          hoveredProject={hoveredProject} 
-          setHoveredProject={setHoveredProject} 
-          isDark={isDark} 
+
+        {/* Projects Portfolio */}
+        <ProjectsPortfolio
+          projectsData={projectsData}
+          hoveredProject={hoveredProject}
+          setHoveredProject={setHoveredProject}
+          isDark={isDark}
         />
-        <div className="grid lg:grid-cols-2 gap-8">
+
+        {/* Tech Usage & Growth Timeline */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
           <TechUsage techUsageData={techUsageData} isDark={isDark} />
-          <GrowthTimeline learningProgressData={learningProgressData} isDark={isDark} />
+          <GrowthTimeline
+            learningProgressData={learningProgressData}
+            isDark={isDark}
+          />
         </div>
+
+        {/* Stats Cards */}
         <StatsCards isDark={isDark} />
       </div>
     </div>
