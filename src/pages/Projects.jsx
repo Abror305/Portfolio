@@ -15,10 +15,10 @@ export default function Projects({ isDark }) {
       img: "/assets/Unvibe.png",
     },
     {
-      name: "Internship",
-      desc: "for MARS internship students",
-      link: "https://interns-lovat.vercel.app/",
-      img: "/assets/Internship.png",
+      name: "Shopify clone",
+      desc: "react ",
+      link: "shopifycom",
+      img: "/assets/Shopify.png",
     },
     {
       name: "Portfolio Website",
