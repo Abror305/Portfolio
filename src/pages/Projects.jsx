@@ -17,7 +17,7 @@ export default function Projects({ isDark }) {
     {
       name: "GacAion market",
       desc: "react + node js ",
-      link: "https://gacaionmarketing.vercel.app/",
+      link: "https://gacaionshop.vercel.app/",
       img: "/assets/Gac.png",
     },
     {
