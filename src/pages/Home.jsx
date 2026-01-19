@@ -25,9 +25,8 @@ export default function Home({ isDark }) {
 
   return (
     <div
-      className={`min-h-screen flex items-center justify-center p-4 md:p-8 transition-colors duration-500 ${
-        isDark ? "bg-base-200" : "bg-base-100"
-      }`}
+      className={`min-h-screen flex items-center justify-center p-4 md:p-8 transition-colors duration-500 ${isDark ? "bg-base-200" : "bg-base-100"
+        }`}
     >
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-6 md:gap-12 py-12">
         {/* Text content */}
@@ -56,9 +55,8 @@ export default function Home({ isDark }) {
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
-                className={`text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold ${
-                  isDark ? "text-secondary" : "text-primary"
-                }`}
+                className={`text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold ${isDark ? "text-secondary" : "text-primary"
+                  }`}
               />
             )}
           </div>
@@ -106,10 +104,11 @@ export default function Home({ isDark }) {
               ${isDark ? "bg-primary/40" : "bg-secondary/40"}`}
             ></div>
             <img
-              src={"assets/im.jpg"}
+              src={"assets/My1.jpg"}
               alt="Abror's image"
-              className="relative w-full h-full rounded-full object-cover border-2 sm:border-4 border-transparent shadow-xl"
+              className="relative w-full h-full rounded-full object-cover object-[center_25%] border-2 sm:border-4 border-transparent shadow-xl"
             />
+
             <div
               className={`absolute top-0 right-0 translate-x-1/3 -translate-y-1/2
               h-6 w-6 sm:h-8 sm:w-8 md:h-12 md:w-12 rounded-full flex items-center justify-center 
